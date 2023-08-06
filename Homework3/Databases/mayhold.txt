@@ -1,0 +1,18 @@
+PID --> PN
+HID --> HS
+HID --> HZ
+HID --> HC
+HZ --> HC
+
+Rentals1(PID, PN, S)
+Rentals2(HID, HS, HZ, HC)
+Rentals3(PID, HID)
+
+FD:
+-- Be aware that the attribute S is not a part of any of the relations.
+-- So S is a part of the candidate key together with PID and HID
+
+PID -> PN
+HID -> HS, HZ -- merged version
+HZ -> HC
+PID -> HID, S
